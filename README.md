@@ -1,1 +1,1 @@
-# Busy-Quiet-Video-Disentangling-for-Video-Classification
+# Busy-Quiet Video Disentangling for Video Classification
