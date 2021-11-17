@@ -4,7 +4,7 @@ from torch import nn
 from ops.basic_ops import ConsensusModule
 from ops.transforms import *
 from torch.nn.init import normal_, constant_
-# from ops.depthwise_conv import DiagonalwiseRefactorization
+from ops.depthwise_conv import DiagonalwiseRefactorization
 from src.bpf import *
 
 class TSN(nn.Module):
