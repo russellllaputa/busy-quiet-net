@@ -4,7 +4,6 @@ from torch import nn
 from ops.basic_ops import ConsensusModule
 from ops.transforms import *
 from torch.nn.init import normal_, constant_
-from ops.depthwise_conv import DiagonalwiseRefactorization
 from src.bpf import *
 
 class TSN(nn.Module):
@@ -130,13 +129,13 @@ class TSN(nn.Module):
                 elif isinstance(m, (LoG ,LO)):
                     mbpf_weight.extend(list(m.parameters()))
                 
-            elif 'nl' in name and isinstance(m, (nn.Conv1d ,nn.Conv2d, nn.Conv3d, DiagonalwiseRefactorization, nn.BatchNorm3d, nn.BatchNorm2d, nn.BatchNorm1d, nn.SyncBatchNorm)) :
+            elif 'nl' in name and isinstance(m, (nn.Conv1d ,nn.Conv2d, nn.Conv3d, nn.BatchNorm3d, nn.BatchNorm2d, nn.BatchNorm1d, nn.SyncBatchNorm)) :
                 ps = list(m.parameters())
                 nl_weight.append(ps[0])
                 if len(ps) == 2:
                     nl_bias.append(ps[1])
                 
-            elif isinstance(m, (nn.Conv1d, nn.Conv2d, nn.Conv3d, DiagonalwiseRefactorization)):
+            elif isinstance(m, (nn.Conv1d, nn.Conv2d, nn.Conv3d)):
                 ps = list(m.parameters())
                 conv_cnt += 1
                 if conv_cnt == 1:
