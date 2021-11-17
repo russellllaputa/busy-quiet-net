@@ -14,6 +14,8 @@ Please refer to [TSM](https://github.com/mit-han-lab/temporal-shift-module) repo
 Coming soon
 
 Because of some modifications of the filenames in our project, many trained models cannot be resumed by the current code. 
+We are re-training the models.
+By running the training scripts we provided bellow, you should get similar results as stated in the paper.
 
 ## Training 
 
