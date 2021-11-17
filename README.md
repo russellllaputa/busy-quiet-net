@@ -68,7 +68,7 @@ python test_f.py something --weights=ckpt.pt --test_segments=16 --batch_size=4  
 This repository is built upon the following baseline implementations.
 
 - [TSM](https://github.com/mit-han-lab/temporal-shift-module)
-- [TSN](https://github.com/yjxiong/tsn-pytorch)
+- [PyTorchVideo] (https://github.com/facebookresearch/pytorchvideo)
 
 
 ### Contact
