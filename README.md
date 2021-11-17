@@ -51,10 +51,9 @@ We provided several examples to train BQN with this repo:
 
 ## Test 
 
-For example, to test the downloaded pretrained models on Kinetics, you can run the scripts below. The scripts test RNL on 8-frame setting by running:
+For example, to test the models, you can run the scripts below. The scripts test on 16-frame setting by running:
 
 ```bash
-
 # test on kinetics
 python test_f.py something --weights=ckpt.pt --test_segments=16 --batch_size=4  -j 10 --test_crops=3  --full_res --dense_sample
 # test on Something
