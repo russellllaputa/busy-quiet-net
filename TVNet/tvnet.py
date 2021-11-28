@@ -1,3 +1,4 @@
+# Copyright (c) 2019 Li, Amazing Ang
 import os
 import PIL.Image as Image
 import numpy as np
